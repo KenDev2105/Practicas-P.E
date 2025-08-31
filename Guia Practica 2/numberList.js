@@ -11,5 +11,28 @@ const rl = readline.createInterface({
 });
 
 rl.question("Ingrese una serie de numeros enteros (separelos por espacios): ", (numbers) => {
+    const toArray = numbers.split(" ")
     
+    const toNumber = []
+    for (let i = 0; i < toArray.length; i++) {
+        toNumber.push(Number(toArray[i]))
+    }
+    
+    // Encontrar mayor y menor
+    const maxNum = Math.max(...toNumber)
+    const minNum = Math.min(...toNumber)
+    
+    // Calcular promedio
+    let suma = 0
+    for (let i = 0; i < toNumber.length; i++) {
+        suma = suma + toNumber[i]
+    }
+    const prom = (suma / toNumber.length).toPrecision(3)
+    
+    // Mostrar resultados
+    console.log(`Número mayor: ${maxNum}`)
+    console.log(`Número menor: ${minNum}`)
+    console.log(`Promedio: ${prom}`)
+
+    rl.close()
 })
