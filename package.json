@@ -5,8 +5,12 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "practica2.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./models/app.js"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
   }
 }
