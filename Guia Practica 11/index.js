@@ -1,10 +1,7 @@
 // *-----CONDICIONALES-----* //
 import { log } from "console";
-import { LOADIPHLPAPI } from "dns";
-import { parse } from "path";
-import { monitorEventLoopDelay } from "perf_hooks";
 import readline from "readline"
-import { getEnvironmentData } from "worker_threads";
+
 
 const rl = readline.createInterface({
     input: process.stdin,
