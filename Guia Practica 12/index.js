@@ -90,11 +90,74 @@ function contadorWhile(num){
     }
 }
 
-rl.question("Ingresa un numero: ", num =>{
+/* rl.question("Ingresa un numero: ", num =>{
     num = parseInt(num)
     contadorFor(num)
     contadorWhile(num)
     rl.close()
-})
+}) */
 
 //? Ejercicio 5 - Cálculo de factorial: Solicita un número y calcula el factorial usando un ciclo.
+
+const factorial = (num) => {
+    num = parseInt(num);
+    let total = 1;
+
+    for (let i = 1; i <= num; i++) {
+        total *= i;
+    }
+
+    console.log(`!${num} =`, total);
+};
+
+/* rl.question("Ingresa el numero: ", num =>{
+    factorial(num)
+        rl.close()
+}) */
+
+//? Ejercicio 6 - Sumar hasta que sea negativo: Pide números hasta que el usuario ingrese uno negativo y suma los valores introducidos.
+let suma = 0;
+
+const sumar = (num) => {
+    let n = parseInt(num);
+    if (n < 0) {
+        console.log("Suma total:", suma);
+        rl.close();
+    } else {
+        suma += n;
+        rl.question("Ingrese otro número: ", sum =>{
+            sumar(sum)
+        });
+    }
+};
+
+/* rl.question("Ingrese un número: ", sum =>{
+    sumar(sum)
+}); */
+
+//? Ejercicio 7 - Promedio con ciclo do-while: El usuario ingresa calificaciones (números positivos). El ciclo termina si la calificación es negativa. Calcula el promedio de los valores introducidos.
+let sum = 0;
+let contador = 0;
+
+const promedio = (num) => {
+    let n = parseInt(num);
+
+    if (n >= 0) {
+        suma += n;
+        contador++;
+        rl.question("Ingrese otra calificación: ", prom =>{
+            promedio(prom)
+        });
+    } else {
+        if (contador > 0) {
+            console.log("El promedio es:", suma / contador);
+        } else {
+            console.log("No se ingresaron calificaciones");
+        }
+        rl.close();
+    }
+};
+
+rl.question("Ingrese una calificación: ", prom =>{
+    promedio(prom)
+});
